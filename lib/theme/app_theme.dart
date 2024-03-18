@@ -6,7 +6,8 @@ class AppTheme {
   static final ThemeData themeData = ThemeData(
     scaffoldBackgroundColor: backColor,
   );
-  static const backColor = Color.fromARGB(255, 124, 78, 31);
-  static const primaryColor = Color.fromARGB(255, 211, 162, 113);
-  static const secondaryColor = Color.fromARGB(255, 84, 58, 32);
+  static const backColor = Color.fromARGB(255, 116, 31, 124);
+  static const primaryColor = Color.fromARGB(255, 208, 113, 211);
+  static const secondaryColor = Color.fromARGB(255, 82, 32, 84);
+  static const colorText = Color.fromARGB(255, 255, 255, 255);
 }

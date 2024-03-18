@@ -37,7 +37,7 @@ class _TimeScreenState extends State<TimeScreen> {
     }
     setState(() {
       indexNavigation = index;
-      Navigator.push(context, ruta);
+      Navigator.pushReplacement(context, ruta);
     });
   }
 
@@ -45,35 +45,36 @@ class _TimeScreenState extends State<TimeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tiempo'),
+        title:
+            const Text('Tiempo', style: TextStyle(color: AppTheme.colorText)),
         backgroundColor: AppTheme.backColor,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: indexNavigation,
         backgroundColor: AppTheme.backColor,
-        unselectedItemColor: const Color.fromARGB(237, 25, 40, 48),
-        selectedItemColor: Colors.black,
+        currentIndex: indexNavigation,
+        unselectedItemColor: const Color.fromARGB(255, 0, 0, 0),
+        selectedItemColor: const Color.fromARGB(255, 0, 0, 0),
         onTap: (index) => openScreen(index, context),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Inicio',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.timer),
-            label: 'Lista',
+            label: 'Tiempo',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.timeline),
-            label: 'Notificaciones',
+            label: 'Uso',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.color_lens),
-            label: 'Imagenes',
+            label: 'Color',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.alarm),
-            label: 'Salir',
+            label: 'Alarma',
           ),
         ],
       ),
